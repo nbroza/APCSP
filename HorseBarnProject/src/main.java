@@ -1,8 +1,9 @@
+import java.util.Arrays;
 
 public class main {
 
 	public static void main(String[] args) {
-		
+		/*
 		HorseBarn hb = new HorseBarn(7);
 		
 		hb.addHorse("Bob", 2500);
@@ -70,6 +71,21 @@ public class main {
 		System.out.println();
 		System.out.println("Barn with horses consolidated");
 		hb.showBarn();
+		*/
+		
+		Horse[] horses = new Horse[7];
+		horses[0] = new Horse("Bob", 2500);
+		horses[1] = new Horse("Kelly", 2500);
+		horses[2] = new Horse("Bill", 1200);
+		horses[3] = new Horse("Sue", 1600);
+		horses[4] = new Horse("Jeff", 2000);
+		horses[5] = new Horse("Michael", 1500);
+		horses[6] = new Horse("Rodney", 1800);
+
+
+		System.out.println("The unsorted array is " + Arrays.deepToString(horses));
+		Arrays.sort(horses);
+		System.out.println("The sorted array is " + Arrays.deepToString(horses));
 	}
 
 }

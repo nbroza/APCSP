@@ -1,4 +1,4 @@
-public class Horse implements IHorse
+public class Horse implements IHorse, Comparable<Horse>
 {
 	String name;
 	int weight;
@@ -18,4 +18,25 @@ public class Horse implements IHorse
 	{
 		return weight;
 	}
+	
+	public int compareTo(Horse h)
+	{
+		if (this.weight == h.getWeight())
+		{
+			return 0;
+		}
+		
+		if (this.weight > h.getWeight())
+		{
+			return 1;
+		}
+		
+		return -1;
+	}
+	
+	public String toString()
+	{
+		return  name + " " + weight;
+	}
+	
 }
